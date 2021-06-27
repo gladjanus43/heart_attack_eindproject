@@ -4,10 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Eindproject</title>
+    <title>Heart Attack based on neural network</title>
+
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <script src="./js/app.js"></script>
+    <div id="loading" class="">
+        <img src="images/loading.gif">
+    </div>
+
+    <div id="content" class="hidden">
+        <div id="heart">
+            <img src="images/heart.png" alt="">
+            <h2 id="result">Calculate if you are at risk of a heartattack</h2>
+        </div>
+
+        <div class="inputs">
+            <div>
+                <label for="">Age</label>
+                <input type="number" name="age" id="age">
+            </div>
+
+            <div>
+                <label for="">Gender</label>
+                <select name="sex" id="sex">
+                    <option value="1">Man</option>
+                    <option value="0">Vrouw</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Chestpain type</label>
+                <select name="cp" id="cp">
+                    <option value="1">Typical angina</option>
+                    <option value="2">atypical angina</option>
+                    <option value="3">non-anginal pain</option>
+                    <option value="4">asymptomisch</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Resting bloodpressure</label>
+                <input type="number" name="trtbps" id="trtbps">
+            </div>
+
+            <div>
+                <label for="">Cholestrol value</label>
+                <input type="number" name="chol" id="chol">
+            </div>
+
+            <div>
+                <label for="">fasting blood sugar > 120 mg/dl</label>
+                <input type="checkbox" name="fbs" id="fbs">
+            </div>
+
+            <div>
+                <label for="">resting electrocardiographic results</label>
+                <select name="restecg" id="restecg">
+                    <option value="0">normal</option>
+                    <option value="1">having ST-T wave abnormality</option>
+                    <option value="2">showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Maximum heartrate</label>
+                <input type="number" name="thalachh" id="thalachh">
+            </div>
+
+            <div>
+                <label for="">exercise induced angina</label>
+                <input type="checkbox" name="exng" id="exng">
+            </div>
+
+            <div>
+                <label for="">ST depression induced by exercise relative to rest</label>
+                <input type="number" name="oldpeak" id="oldpeak">
+            </div>
+
+            <div>
+                <label for="">The slope of the peak exercise ST segment</label>
+                <select name="slp" id="slp">
+                    <option value="0">upsloping</option>
+                    <option value="1">flat</option>
+                    <option value="2">downsloping</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">number of major vessels (0-3) colored by flourosopy</label>
+                <select name="caa" id="caa">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Thal?</label>
+                <select name="thall" id="thall">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <button onclick="calculateRisk()" id="calculate_button">Calculate</button>
+        </div>
+
+    </div>
 </body>
 </html>

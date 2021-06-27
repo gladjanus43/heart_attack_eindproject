@@ -1,54 +1,25 @@
-# HERKANSING - Machine Learning for Javascript - Eindproject
-
-## Herkansing Eindproject
-Voor je herkansing maak je een geheel nieuw eindproject. Dit is een nieuwe opdracht op github classroom! 
-
-## Herkansing Weekopdrachten
-Als je geen punten hebt gehaald voor het maken van 3 van de 4 weekopdrachten, dan kan je dit herkansen door **alle vier weekopdrachten** te maken. Deze kan je pushen naar je **bestaande repository** van de wekelijkse opdrachten.
-
-## Deadline
-
-- Push je project vóór **maandag 28 juni 10:00 uur** naar github classroom.
-- Wacht niet tot 09:55 uur met pushen! Als er dan iets mis gaat heb je een probleem. Push regelmatig je updates tijdens je werk.
-- Vul de **verantwoording** in (*typ in dit README.md bestand*). Vul bij elk punt in of en hoe je project hieraan voldoet. Verwijs naar relevante code, en vul dit aan met eigen opmerkingen, links, filmpjes, foto's, etc.
-- Lees de cursushandleiding om te kijken hoe je complete eindcijfer tot stand komt.
-
-## Mappenstructuur
-
-- prototype 1 : je eerste prototype
-- prototype 2 : je tweede prototype
-- development : Je uitgewerkte prototype dat resulteert in een opgeslagen model.
-- deployment : de website voor eindgebruikers waarin je model wordt ingeladen en gebruikt.
-
-## Ontvankelijkheidseis
-
-- Het inleverdocument van je project is ingevuld en komt overeen met de code van je project. 
-- Het project is zelf bedacht en zelf geschreven.
-
-<br>
-<br>
-<br>
-
 # Inleverdocument
 
 ## Concept (1 punt)
-Je hebt een eigen concept bedacht voor een Machine Learning applicatie met behulp van de AI x Design Cards. Je inleverdocument bevat een korte uitleg over jouw idee en de toegevoegde waarde van Machine Learning in jouw applicatie. 
+Ik had het idee om een rekenmachine te maken die kan bepalen hoe vatbaar je bent voor een hart aanval. Door op internet te zoeken kwam ik al snel een mooie dataset tegen welke alle informatie beschikbaar had die ik nodig heb. 
 
-Je hebt aan de hand van de "Machine Learning Reading List" op GitHub onderzoek gedaan naar verschillende libraries, tools en API's om te onderzoeken wat zou kunnen werken voor jouw concept. Beschrijf je bevindingen kort in je inleverdocument.
+Om te kijken naar mogelijke oplossingen ben ik als eerste met de decission tree begonnen. Ik had hierbij het idee dat het een goede tool kon zijn om door de stappen heen te lopen. De dataset gaf een 1 of een 0 terug dus dit moest te doen zijn. Verder wilde ik kijken naar KNN en Neural networks. De KNN leek me goed omdat het mensen clusterd die wel of neit vatbaar zijn. Neural Networks kunnen naar mijn idee bijna alles voorspellen als de data goed is. 
+
+Ik heb er voor gekozen om naar ml5 te kijken omdat we hier al veel mee hebben gedaan. Ook is de documentatie goed dus dat komt goed van pas tijdens het maken van het project. ML5 heeft neural networks inzich, en daarnaast ook een KNN algoritme. 
 
 ## Prototype 1  (1 punt)
-Naar aanleiding van je onderzoek heb je een code prototype gebouwd, om te testen of jouw gekozen algoritme werkt zoals je verwacht. Omschrijf het resultaat in je inleverdocument. Hoe nauwkeurig is je algoritme? Heb je training data nodig en hoe kom je daar aan? Gebruik je classification of regression? Is het algoritme makkelijk in een web app toe te passen?
+het eerste prototype dat ik heb gemaakt was op basis van het KNN algoritme van ml5. Ik had het model snel getraind maar ik kwam er achter dat de knn functie in ml5 geen export heeft voor een model, geen load functie en geen predict functie. Deze was dus onmogelijk om toe te passen in het project. 
 
 ## Prototype 2  (1 punt)
-Om een betere keuze te maken heb je een tweede prototype gebouwd met een ander algoritme, library of API. Omschrijf ook hier het resultaat in je inleverdocument zoals bij het eerste prototype.
+het tweede prototype is gemaakt met een neural network. Deze heeft dus wel de save, load en predict functie. Het inladen van de data ging goed en ik kon voorspellingen maken. Dit is dus de manier waarop ik de uitwerking ga voortzetten. 
 
 ## Uitwerking  (1 punt)
-Je hebt je prototype uitgewerkt tot een werkende machine learning applicatie. Je hebt supervised of unsupervised learning gebruikt om een model te bouwen dat goed werkt voor jouw concept. Je hebt getest of het werkt onder verschillende omstandigheden of met verschillende gebruikers.
+Ik heb er dus voor gekozen om een neural network te gebruiken omdat deze de functionaliteiten bezit die ik nodig had. Om het model beter te kunnen gebruiken heb ik er ook een accuracy test in verwerkt. Hiermee kan ik door middel van de data testen of de voorspellingen daadwerkelijk goed zijn. Nadat het model klaar was kon ik gemakkelijk het model downloaden door middel van een save functie. 
 
 ## Web applicatie (1 punt)
-Je hebt een werkende **html + css + javascript** applicatie gebouwd om je algoritme heen. De applicatie staat online. Je hebt tijd besteed aan een werkbare gebruikerservaring en layout.
+Als laatste heb ik dus het gedownloade model kunnen inladen in een applicatie. Door middel van de load functie is het model in een keer beschikbaar. Wanneer het model geladen is wordt de pagina pas beschikbaar voor de gebruiker. Verder heb ik geprobeerd alle input velden uit te typen zodat de gebruiker gemakkelijk kan aanklikken wat hij zoekt. Wanneer de gebruiker op calculate drukt wordt het percentage weergegeven aan de bovenkant van de pagina. 
 
 ## Organisatie van code (1 punt)
-Je hebt nagedacht over de organisatie van code. Je project gebruikt coding standards zoals je die geleerd hebt in eerdere programmeervakken: je deelt functionaliteit op in eigen bestanden. Je gebruikt classes of functies om code overzichtelijk te maken. Je readme file bevat installatie instructies waarmee anderen de applicatie lokaal kunnen installeren.
+Ik gebruik altijd veel functies wanneer ik werk met javascript. Het maakt het naar mijn idee allemaal een stuk overzichtelijker. Verder gebruik ik duidelijke benamingen en wil ik altijd een logisch bestand opleveren. 
 
 ### Veel succes! 
